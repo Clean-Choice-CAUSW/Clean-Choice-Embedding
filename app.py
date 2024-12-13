@@ -33,7 +33,7 @@ def embed():
             embResponseDtoList.append(embResponseDto)
 
         # 응답 반환
-        print(embResponseDtoList)
+        # print(embResponseDtoList)
         return jsonify(embResponseDtoList)
 
     except Exception as e:
