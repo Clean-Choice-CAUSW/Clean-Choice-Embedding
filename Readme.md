@@ -4,8 +4,23 @@
 
 ## How to Operate?
 ```bash
+$ brew install pyenv
+
+$ export PYENV_ROOT="$HOME/.pyenv"
+$ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+$ eval "$(pyenv init -)"
+$ source ~/.zshrc
+
+$ pyenv install 3.11.9
+$ pyenv local 3.11.9   # 현재 디렉토리에 3.11.9 적용
+$ python --version     # 여기서 꼭 3.11.9 나오는지 확인
 $ python -m venv .venv
 $ source .venv/bin/activate
+$ python --version     # 이제 가상환경 안에서도 3.11.9가 나와야 정상
+
+$ python -m venv .venv
+$ source .venv/bin/activate
+$ pip install --upgrade pip
 $ pip install -r requirements.txt
 $ python app.py
 ```
